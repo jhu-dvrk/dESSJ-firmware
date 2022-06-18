@@ -15,9 +15,9 @@ void setup() {
   Serial.begin(9600);
   analogReadResolution(12);
 
-  pinMode(LED_BUILTIN, OUTPUT); // initialize the built-in LED pin to indicate when a central is connected
+  pinMode(LED_BUILTIN, OUTPUT);
   for (int i = 0; i < 8; i++) {
-    pinMode(analog_pins[i], INPUT); // initialize the built-in LED pin to indicate when a central is connected
+    pinMode(analog_pins[i], INPUT);
   }
 
   if (!BLE.begin()) {
