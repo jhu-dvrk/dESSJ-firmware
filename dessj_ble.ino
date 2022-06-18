@@ -1,23 +1,5 @@
-/*
-  Battery Monitor
-
-  This example creates a Bluetooth® Low Energy peripheral with the standard battery service and
-  level characteristic. The A0 pin is used to calculate the battery level.
-
-  The circuit:
-  - Arduino MKR WiFi 1010, Arduino Uno WiFi Rev2 board, Arduino Nano 33 IoT,
-    Arduino Nano 33 BLE, or Arduino Nano 33 BLE Sense board.
-
-  You can use a generic Bluetooth® Low Energy central app, like LightBlue (iOS and Android) or
-  nRF Connect (Android), to interact with the services and characteristics
-  created in this sketch.
-
-  This example code is in the public domain.
-*/
-
 #include <ArduinoBLE.h>
 
- // Bluetooth® Low Energy Battery Service
 BLEService sujservice("babb122c-de4c-11ec-9d64-0242ac120100");
 BLEService potservice("babb122c-de4c-11ec-9d64-0242ac120000");
 
@@ -30,7 +12,7 @@ uint8_t analog_pins[8] = {A0, A1, A2, A3, A4, A5, A6, A7};
 char output_string[128] = "";
 
 void setup() {
-  Serial.begin(9600);    // initialize serial communication
+  Serial.begin(9600);
   analogReadResolution(12);
 
   pinMode(LED_BUILTIN, OUTPUT); // initialize the built-in LED pin to indicate when a central is connected
@@ -38,18 +20,12 @@ void setup() {
     pinMode(analog_pins[i], INPUT); // initialize the built-in LED pin to indicate when a central is connected
   }
 
-  // begin initialization
   if (!BLE.begin()) {
     Serial.println("starting BLE failed!");
 
     while (1);
   }
 
-  /* Set a local name for the Bluetooth® Low Energy device
-     This name will appear in advertising packets
-     and can be used by remote devices to identify this Bluetooth® Low Energy device
-     The name can be changed but maybe be truncated based on space left in advertisement packet
-  */
   BLE.setDeviceName("dVRK SUJ");
   BLE.setLocalName("dVRK SUJ");
   
