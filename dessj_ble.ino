@@ -1,7 +1,6 @@
 #include <ArduinoBLE.h>
 
 BLEService sujservice("babb122c-de4c-11ec-9d64-0242ac120100");
-BLEService potservice("babb122c-de4c-11ec-9d64-0242ac120000");
 
 uint16_t all_pots_values[8] = {0};
 
