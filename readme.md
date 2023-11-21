@@ -1,5 +1,9 @@
 # Firmware for dESSJ
 
+The dEESJ board is used in the S/Si SUJs.  These boards provide:
+* Pass-through for the serial communication (LVDS) between the dVRK controller and the arm (ESPM)
+* SUJ potentiometer sampling using an Arduino board with BlueTooth (BLE) to communicate with the PC
+
 ## Build environment
 
 1. Install `arduino-cli`.
