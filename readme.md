@@ -40,6 +40,8 @@ arduino-cli compile -b arduino:mbed_nano:nano33ble .
 
 ## Upload the firmware to board
 
+Connect the dEESJ arduino board to your PC using a USB to micro-USB cable.
+
 ```sh
 arduino-cli upload -b arduino:mbed_nano:nano33ble -p /dev/ttyACM0
 ```
