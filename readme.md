@@ -1,5 +1,5 @@
-[!WARNING]
-dESSJ hardware is deprecated.
+> [!WARNING]
+> dESSJ hardware is deprecated.
 
 # Firmware for dESSJ
 
