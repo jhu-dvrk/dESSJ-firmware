@@ -1,3 +1,5 @@
+[!WARNING] dESSJ hardware is deprecated.
+
 # Firmware for dESSJ
 
 The dEESJ board is used in the S/Si SUJs.  These boards provide:
